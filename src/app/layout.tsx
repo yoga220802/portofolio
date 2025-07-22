@@ -1,5 +1,21 @@
 import type { Metadata } from "next";
-import "./globals.css"; // Mengimpor style global yang sudah kita buat
+import { Arvo, Inter } from "next/font/google";
+import "./globals.css";
+
+// Konfigurasi font Arvo
+const arvo = Arvo({
+	subsets: ["latin"],
+	weight: ["400", "700"],
+	style: ["normal", "italic"],
+	display: "swap",
+	variable: "--font-arvo",
+});
+
+const inter = Inter({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
 	title: "Yoga A. | Software Engineer & AI Enthusiast",
@@ -14,10 +30,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			{/* Menerapkan font-sans (Inter) sebagai font default untuk seluruh body.
-        Kita bisa override ini dengan font-serif (Arvo) di komponen spesifik.
-      */}
-			<body className='font-sans'>{children}</body>
+			<body
+				className={`${arvo.variable} ${inter.variable} font-serif bg-navy text-slate`}>
+				{children}
+			</body>
 		</html>
 	);
 }

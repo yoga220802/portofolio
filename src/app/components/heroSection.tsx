@@ -73,7 +73,7 @@ const HeroSection = () => {
 					<motion.h1
 						className='text-white font-bold text-4xl sm:text-5xl lg:text-5xl leading-tight lg:whitespace-nowrap'
 						variants={itemVariants}>
-						Hi, I'm Yoga Agustiansyah
+						Hi, I&apos;m Yoga Agustiansyah
 					</motion.h1>
 
 					<motion.h2
@@ -94,7 +94,7 @@ const HeroSection = () => {
 						<a
 							href='#contact'
 							className='px-8 py-3 text-[#0B80A1] font-bold text-lg lg:text-xl bg-transparent border-2 border-[#0B80A1] rounded-lg hover:bg-[#0B80A1]/10 transition-colors duration-300'>
-							Let's Talk
+							Let&apos;s Talk
 						</a>
 					</motion.div>
 

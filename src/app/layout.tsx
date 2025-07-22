@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
-import { Arvo, Inter } from "next/font/google";
+import { Arvo, Markazi_Text } from "next/font/google";
 import "./globals.css";
+import Header from "./components/header";
 
-// Konfigurasi font Arvo
+// Inisialisasi font untuk body (Arvo)
 const arvo = Arvo({
 	subsets: ["latin"],
 	weight: ["400", "700"],
 	style: ["normal", "italic"],
-	display: "swap",
 	variable: "--font-arvo",
 });
 
-const inter = Inter({
+// Inisialisasi font untuk heading (Markazi Text)
+const markazi = Markazi_Text({
 	subsets: ["latin"],
-	display: "swap",
-	variable: "--font-inter",
+	weight: ["400", "500", "600", "700"],
+	variable: "--font-markazi",
 });
 
 export const metadata: Metadata = {
-	title: "Yoga A. | Software Engineer & AI Enthusiast",
-	description:
-		"Portfolio pribadi Yoga Agustiansyah, seorang software engineer dan peminat AI.",
+	title: "Yoga's Portofolio",
+	description: "Portofolio of Yoga, a Fullstack Developer",
 };
 
 export default function RootLayout({
@@ -29,9 +29,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
-			<body
-				className={`${arvo.variable} ${inter.variable} font-serif bg-navy text-slate`}>
+		<html lang='en' className={`${arvo.variable} ${markazi.variable}`}>
+			<body className='font-body bg-gray-900 text-white'>
+				<Header />
 				{children}
 			</body>
 		</html>

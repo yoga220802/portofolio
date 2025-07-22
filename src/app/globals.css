@@ -1,18 +1,8 @@
-/*
-* =====================================================================================
-*
-* Filename:  globals.css
-*
-* Description:  File CSS global untuk aplikasi Next.js.
-* - Mengimpor semua varian font Arvo yang dibutuhkan.
-* - FIX: Menghapus styling body dari @layer base untuk mencegah build error.
-* - Menginisialisasi Tailwind CSS dengan sintaks modern (v4+).
-*
-* =====================================================================================
-*/
-
-
-/* 2. Inisialisasi Tailwind CSS (Sintaks untuk v4+) */
 @import "tailwindcss";
 
-/* 3. Styling base sekarang akan ditangani di layout.tsx */
+@layer base {
+    :root {
+        --font-sans: var(--font-arvo);
+        --font-serif: var(--font-markazi);
+    }
+}

@@ -1,26 +1,20 @@
-import Header from "./components/header";
 import HeroSection from "./components/heroSection";
 
 export default function Home() {
 	return (
-		<>
-			<Header />
-
+		<main>
 			<HeroSection />
 
-			<main className='px-4 sm:px-6 lg:px-8'>
-				<div className='max-w-7xl mx-auto'>
-
-					<section
-						id='about'
-						className='min-h-screen flex items-center justify-center py-20'>
-						<h2 className='text-4xl font-bold text-center text-lightest-slate font-serif'>
-							Section Lain Sedang Dibangun
-						</h2>
-					</section>
-
+			<section
+				id='about'
+				className='min-h-screen flex items-center justify-center bg-gray-800 px-4 sm:px-6 lg:px-8'>
+				<div className='max-w-3xl mx-auto text-center'>
+					<h2 className='text-4xl font-bold text-white'>About Me</h2>
+					<p className='mt-4 text-lg text-gray-300'>
+						Bagian Lain Masing Dalam Pengembangan
+					</p>
 				</div>
-			</main>
-		</>
+			</section>
+		</main>
 	);
 }

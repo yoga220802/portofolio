@@ -1,9 +1,12 @@
+import AboutSection from "./components/aboutSection";
 import HeroSection from "./components/heroSection";
 
 export default function Home() {
 	return (
 		<main>
 			<HeroSection />
+
+			<AboutSection />
 
 			<section
 				id='about'
